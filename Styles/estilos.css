@@ -7,7 +7,7 @@
 }
 
 body{
-    background: url(wall.jpg);
+    background: url(../Styles/wall.jpg);
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -224,14 +224,14 @@ h1{
     cursor: pointer;
 }
 
-.contenedor-form .select-items{
+/* .contenedor-form .select-items{
     position: absolute;
     background: #ff851b;
     top: %;
     left: 0;
     right: 0;
-    z-index: 99;
-}
+    z-index: 99; 
+}*/
 
 .contenedor-form .select-hide{
     display: none;
