@@ -5,15 +5,18 @@
         <title>POKEMON GO Formulario</title>
         <link href="../p/Styles/Lillipup.png" type="image/x-icon" rel="shorcut icon" />
         <link rel="stylesheet" href="../p/Styles/estilos.css">
-        <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="../p/Scripts/jquery-3.1.1.min.js"></script>
         
         <h1> Bienvenido al registro de Pokemon GO</h1>
     </head>
 
     <body>
     <div class="contenedor-form">
+        <div class="toggle">
+            <span> Revisar y modificar </span>
+        </div>
         <div class="formulario">
-             <h2>Crea tu cuenta</h2>
+             <h2>Crea tu cuenta</h2><br/>
             <form action="../p/php/post.php" method="post">
                  <p> <input type="text" name="user" placeholder="nickname" required>
                    <input type="password" placeholder="Contraseña" name="contraseña" required>
@@ -69,6 +72,13 @@
             </form>
             <script src="../p/Scripts/poke.js"></script>
         </div>
+
+        <div class="formulario 2">
+
+
+
+        </div>
+        <script src="Scripts/toggle.js"></script>
     </div>
     </body>
 
