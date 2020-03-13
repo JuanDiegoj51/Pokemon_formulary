@@ -21,6 +21,20 @@ body{
     border-radius: 5px;
     padding: 40px;
 }
+.toggle{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 25px;
+    text-align: center;
+    border-top: 2px solid #ff851b;
+    border-bottom: 2px solid #ff851b;
+    transition: all .5s ease;
+    cursor: pointer;
+}
 
 .contenedor-form input[type="text"],
 .contenedor-form input[type="password"],
@@ -197,7 +211,7 @@ h1{
 }
 
 .contenedor-form .select-selected{
-    background: #ff815b;
+    background: #ff851b;
 }
 
 .contenedor-form .select-selected:after{
