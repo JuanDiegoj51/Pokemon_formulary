@@ -17,9 +17,9 @@
         </div>
         <div class="formulario">
              <h2>Crea tu cuenta</h2><br/>
-            <form action="../p/php/post.php" method="post">
-                 <p> <input type="text" name="user" placeholder="nickname" required>
-                   <input type="password" placeholder="Contraseña" name="contraseña" required>
+            <form method="post">
+                 <p> <input type="text" placeholder="nickname" name="username" required>
+                   <input type="password" placeholder="Contraseña" name="contraseña">
                   <input type="email" placeholder="Correo electronico" name="correo" required></p>
                 <div class="radio-group">
                   <h4>Genero</h4>
@@ -37,11 +37,11 @@
                 <div class="check">
                 <h4>¿Cual es el pokemon que más te gusta?</h4> <br/>
                     <label class="radius">
-                        <input type="radio" name="poke" value="pikachu"> Pikachu
+                        <input type="radio" name="poke" value="Pikachu"> Pikachu
                         <span></span>
                         </label>
                     <label class="radius">
-                      <input type="radio" name="poke" value="chikorita"> Chikorita
+                      <input type="radio" name="poke" value="Chikorita"> Chikorita
                         <span></span>
                         </label>
                     <label class="radius">
@@ -49,7 +49,7 @@
                         <span></span>
                         </label>
                     <label class="radius">
-                      <input type="radio" name="poke" value="Dratini    "> Dratini
+                      <input type="radio" name="poke" value="Dratini"> Dratini
                         <span></span>
                         </label>
                     </div>
@@ -68,7 +68,7 @@
                 <br/>
                 <h4>¿Te gustó el formulario? </h4> <br/>
                     <textarea name="comentario" rows="5" cols="50" placeholder="Deja tu comentario"></textarea>
-                    <input type="submit" value="Ingresar el formulario">
+                    <input type="submit" name="submit" value="Ingresar el formulario">
             </form>
             <script src="../p/Scripts/poke.js"></script>
         </div>
@@ -80,6 +80,9 @@
         </div>
         <script src="Scripts/toggle.js"></script>
     </div>
+    <?php
+    include("../p/php/client.php");
+    ?>
     </body>
 
 
