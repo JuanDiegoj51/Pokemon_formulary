@@ -16,7 +16,7 @@
             <span> Revisar y modificar </span>
         </div>
         <div class="formulario">
-             <h2>Crea tu cuenta</h2><br/>
+            <h2>Crea tu cuenta</h2><br/>
             <form method="post">
                  <p> <input type="text" placeholder="nickname" name="username" required>
                    <input type="password" placeholder="Contraseña" name="contraseña">
@@ -74,9 +74,11 @@
         </div>
 
         <div class="formulario 2">
-
-
-
+            <h2> Busque el dato que necesite </h2> <br/>
+            <form method="post">
+                <input type="text" name="username" placeholder="Nickname">
+                
+            </form>
         </div>
         <script src="Scripts/toggle.js"></script>
     </div>
