@@ -13,7 +13,7 @@
     <body>
     <div class="contenedor-form">
         <div class="toggle">
-            <span> Revisar y modificar </span>
+            <span> Modificar </span>
         </div>
         <div class="formulario">
             <h2>Crea tu cuenta</h2><br/>
@@ -73,19 +73,18 @@
             <script src="../p/Scripts/poke.js"></script>
         </div>
 
-        <div class="formulario 2">
+        <div class="formulario">
             <h2> Busque el dato que necesite </h2> <br/>
             <form method="post">
-                <input type="text" name="username" placeholder="Nickname">
-                
+                <input type="text" name="username" placeholder="Nickname" required>
+                <input type="submit" value="Buscar Username">
             </form>
         </div>
-        <script src="Scripts/toggle.js"></script>
     </div>
     <?php
     include("../p/php/client.php");
     ?>
     </body>
 
-
+    <script type="text/javascript" src="Scripts/toggle.js"></script>
 </html>
