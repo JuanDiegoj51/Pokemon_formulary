@@ -21,23 +21,22 @@
             ('$nick','$password','$correo','$genero','$poke','$pokeparada','$comentario')";
             $rows = mysqli_query($conexion,$query);
             if($rows){
-                ?>
-                <h3 class="ok">¡Ingresado de manera correcta!</h3>
-                <?php
+                $_SESSION['message'] = 'Se han ingresado los datos';
+                $_SESSION['message_type'] = 'success';
             }else{
-                ?>
-                <div class="alert alert-warning" role="alert">
-                    No se pudo ingresar la información 
-                </div>
-                <?php
+                $_SESSION['message'] = 'No se pudieron ingresar los datos';
+                $_SESSION['message_type'] = 'danger';
             }
         }   
         else{
-            ?>
-            <h3 class="bad">Porfavor, complete las casillas</3>
-            <?php
+                $_SESSION['message'] = 'Porfavor, llene las casillas';
+                $_SESSION['message_type'] = 'warning';
             }
+
+
+            header("Location: http://localhost/dashboard/p/public/index.php");
     }
+    
     /*$sql = "UPDATE `info_user` SET `nick` = \'Mike\' WHERE `info_user`.`nick` = \'Rose\'";*/
 ?>
 

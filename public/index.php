@@ -1,38 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>POKEMON GO Formulario</title>
-        <link href="../p/Styles/Lillipup.png" type="image/x-icon" rel="shorcut icon" />
-        <link rel="stylesheet" href="../p/Styles/estilos.css">
-        <script type="text/javascript" src="../p/Scripts/jquery-3.1.1.min.js"></script>
-        
-        <h1> Bienvenido a Pokemon GO</h1>
-    </head>
+<?php include("../includes/header.php") ?>
+<?php include("../includes/connect.php") ?>
 
-    <body>
+
     <div class="contenedor-form">
         <div class="toggle">
             <span> Crear cuenta </span>
         </div>
 
         <div class="formulario">
-            <h2> Busque el dato que necesite </h2> <br/>
-            <form method="get">
+            <h3> Buscar </h3> <br/>
+            <form action="../includes/search.php" method="get">
                 <input type="text" name="username" placeholder="Nickname" required>
                 <input type="submit" name="buscar" value="Buscar Username">
+                
                 
             </form>
         </div>
 
         <div class="formulario">
-            <h2>Crea tu cuenta</h2><br/>
-            <form method="post">
-                 <p> <input type="text" placeholder="nickname" name="username" required>
+            <h3>Crea tu cuenta</h3><br/>
+            <form action="../includes/save.php"method="post">
+                 <p> <input type="text" placeholder="Nickname" name="username" required>
                    <input type="password" placeholder="Contraseña" name="contraseña">
                   <input type="email" placeholder="Correo electronico" name="correo" required></p>
                 <div class="radio-group">
-                  <h4>Genero</h4>
+                  <h5>Genero</h5>
                       <label class="radio">
                           <input type="radio" name="genero" value="Hombre">Hombre 
                           <span></span>
@@ -44,7 +36,7 @@
                 </div>
                 <br/>
                 <div class="check">
-                <h4>¿Cual es el pokemon que más te gusta?</h4> <br/>
+                <h5>¿Cual es el pokemon que más te gusta?</h5> <br/>
                     <label class="radius">
                         <input type="radio" name="poke" value="Pikachu"> Pikachu
                         <span></span>
@@ -63,30 +55,33 @@
                         </label>
                 </div>
                 <br/>
-                <h4>¿En que pokeparada estas ubicado?</h4><br/>
-                <div class="custom-select" style="width: 210px;">
-                <select name="pokeparada">
-                    <option>Selecciona tu pokeparada:</option>
-                    <option value"colombia">Colombia</option>
-                    <option value"brasil">Brasil</option>
-                    <option value"argentina">Argentina</option>
-                    <option value"estadosunidos">Estados Unidos</option>
-                    <option value"mexico">Mexico</option>
-                </select>
+                <h5>¿En que pokeparada estas ubicado?</h5><br/>
+                
+                <div class="group-select">
+                    <select class="custom-select" name="pokeparada" style="width: 210px;">
+                        <option selected>Selecciona tu pokeparada:</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="estadosunidos">Estados Unidos</option>
+                        <option value="mexico">Mexico</option>
+                    </select>
                 </div>
                 <br/>
-                <h4>¿Te gustó el formulario? </h4> <br/>
+                <h5>¿Te gustó el formulario? </h5> <br/>
                     <textarea name="comentario" rows="5" cols="50" placeholder="Deja tu comentario"></textarea>
                     <input type="submit" name="ingresar" value="Ingresar el formulario">
             </form>
-            <script src="../p/Scripts/poke.js"></script>
         </div>
-
     </div>
-    <?php
-    include("../p/php/save.php");
-    ?>
-    </body>
-
-    <script type="text/javascript" src="Scripts/toggle.js"></script>
-</html>
+    <?php include("../includes/save.php");?>
+    <?php if(isset($_SESSION['message'])) { ?>
+        <div class="alert alert-<?= $_SESSION['message_type']?> alert-dismissible fade show" role="alert">
+            <?= $_SESSION['message'] ?>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>                    
+        </div>
+        <?php session_unset(); } ?>                
+    <?php include("../includes/footer.php"); ?>
+    

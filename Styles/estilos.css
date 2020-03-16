@@ -11,6 +11,25 @@ body{
     -webkit-background-size: cover;
     background-size: cover;
 }
+
+.alert{
+    text-align: center;
+    position: relative; 
+    width: 100%;
+    max-width: 700px;
+    margin: 48px auto;
+}
+
+.navbar{
+    text-align: center;
+    position: relative; 
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 5px;
+    transition: all 0.5 ease;
+}
+
 .contenedor-form {
     position: relative;
     background: rgba(0,0,0,.7);
@@ -93,7 +112,8 @@ body{
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 3px;
+    transition: all 0.5s ease;
 }
 
 .contenedor-form .radio span:after{
@@ -110,11 +130,15 @@ body{
     transition: 300ms ease-in-out 0s;
 }
 
+.contenedor-form .radio span:hover{
+    border: solid #13BD38;
+}
+
 .contenedor-form .radio input[type="radio"]:checked~span:after{
     transform: translate(-50%, -50%) scale(1);
 }
 
-.contenedor-form h4{
+.contenedor-form h5{
     text-align:center;
 }
 
@@ -132,6 +156,10 @@ body{
     font-weight: normal;
     margin: 0 0 20px 0;
     transition: all 1s ease;
+}
+
+.contenedor-form textarea[name="comentario"]:focus{
+    border-bottom: 4px solid #13BD38;
 }
 
 .contenedor-form input[type="submit"]{
@@ -152,15 +180,8 @@ body{
     background: rgba(19,189,56);
 }
 
-h1{
-    position: relative;
-    background: rgba(0,0,0,.7);
-    width: 100%;
-    max-width: 380.9px;
-    margin: 48px auto;
-    color: #fff;
-    border-radius: 5px;
-    padding: 5px;
+.container .navbar-brand{
+    margin:auto;
 }
 
 .contenedor-form .radius{
@@ -183,8 +204,11 @@ h1{
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
-    
+    top: 3px;
+    transition: all 0.5s ease;
+}
+.contenedor-form .radius span:hover{
+    border: solid #13BD38;
 }
 .contenedor-form .radius span:after{
     content: "";
@@ -204,63 +228,19 @@ h1{
     transform: translate(-50%, -50%) scale(1);
 }
 
-.contenedor-form .custom-select{
-    position: relative;
-}
-
-.contenedor-form .custom-select select{
-    display: none;
-}
-
-.contenedor-form .select-selected{
-    background: #ff851b;
-}
-
-.contenedor-form .select-selected:after{
-    position: absolute;
-    content: "";
-    top: 14px;
-    right: 10px;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent;
-}
-
-.contenedor-form .select-selected.select-arrow-active:after{
-    border-color: transparent transparent #fff transparent;
-    top: 7px;
-}
-
-.contenedor-form .select-items div,.select-selected{
-    color: #ffffff;
-    padding: 8px 16px;
-    border: 1px solid transparent;
-    border-color: transparent transparent rgba(0,0,0,0.1) transparent;
-    cursor: pointer;
-}
-
-.contenedor-form .select-items{
-    position: absolute;
-    background: #ff851b;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 99; 
-}
-
-.contenedor-form .select-hide{
-    display: none;
-}
-
-.contenedor-form .select-items div:hover, .same-as-selected{
-    background-color: rgba(0,0,0,.1);
-}
-
 .contenedor-form .formulario {
     display: none;
 }
-
+.contenedor-form select[name="pokeparada"]{
+    background-color: #ff851b;
+    border-color: #ff851b;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.contenedor-form select[name="pokeparada"]:focus{
+    background-color: #13BD38;
+    border-color: #13BD38;
+}
 .contenedor-form .formulario:nth-child(2){
     display: block;
 }
