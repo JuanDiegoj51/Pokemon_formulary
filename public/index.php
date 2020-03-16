@@ -11,9 +11,13 @@
             <h3> Buscar </h3> <br/>
             <form action="../includes/search.php" method="get">
                 <input type="text" name="username" placeholder="Nickname" required>
-                <input type="submit" name="buscar" value="Buscar Username">
-                
-                
+                <input type="submit" name="buscar" value="Editar Username">
+
+            </form>
+            <br/>
+            <form action="../includes/delete.php" method="get">
+                <input type="text" name="username" placeholder="Nickname" required> 
+                <input type="submit" name="delete" value="Eliminar Username">
             </form>
         </div>
 

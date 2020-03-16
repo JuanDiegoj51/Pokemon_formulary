@@ -6,7 +6,7 @@
         $rows = mysqli_query($conexion, $query);
         if (mysqli_num_rows($rows)>0){
             while($row=mysqli_fetch_array($rows)){
-            $row[0]." ".$row[1]." ".$row[2]." ".$row[3]." ".$row[4]." ".$row[5]." ".$row[6];
+            echo $row[0]." ".$row[1]." ".$row[2]." ".$row[3]." ".$row[4]." ".$row[5]." ".$row[6];
             ?>
             <a href="../public/index.php?user=$row[0]&passw=$row[1]"> 
             <?php
@@ -15,7 +15,7 @@
         }
     }else{
         $_SESSION['message'] = 'Verifique el Nickname';
-        $_SESSION['message_type'] = 'danger';
+        $_SESSION['message_type'] = 'warning';
     }
     header("Location: http://localhost/dashboard/p/public/index.php");
 }
