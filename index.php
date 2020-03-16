@@ -7,14 +7,24 @@
         <link rel="stylesheet" href="../p/Styles/estilos.css">
         <script type="text/javascript" src="../p/Scripts/jquery-3.1.1.min.js"></script>
         
-        <h1> Bienvenido al registro de Pokemon GO</h1>
+        <h1> Bienvenido a Pokemon GO</h1>
     </head>
 
     <body>
     <div class="contenedor-form">
         <div class="toggle">
-            <span> Modificar </span>
+            <span> Crear cuenta </span>
         </div>
+
+        <div class="formulario">
+            <h2> Busque el dato que necesite </h2> <br/>
+            <form method="get">
+                <input type="text" name="username" placeholder="Nickname" required>
+                <input type="submit" name="buscar" value="Buscar Username">
+                
+            </form>
+        </div>
+
         <div class="formulario">
             <h2>Crea tu cuenta</h2><br/>
             <form method="post">
@@ -24,14 +34,13 @@
                 <div class="radio-group">
                   <h4>Genero</h4>
                       <label class="radio">
-                          <input type="radio" name="sexo" value="Hombre">Hombre 
+                          <input type="radio" name="genero" value="Hombre">Hombre 
                           <span></span>
                       </label>
                       <label class="radio">
-                      <input type="radio" name="sexo" value="Mujer"> Mujer
-                      <span></span>
+                          <input type="radio" name="genero" value="Mujer"> Mujer
+                          <span></span>
                       </label>
-                    
                 </div>
                 <br/>
                 <div class="check">
@@ -52,7 +61,7 @@
                       <input type="radio" name="poke" value="Dratini"> Dratini
                         <span></span>
                         </label>
-                    </div>
+                </div>
                 <br/>
                 <h4>¿En que pokeparada estas ubicado?</h4><br/>
                 <div class="custom-select" style="width: 210px;">
@@ -68,21 +77,14 @@
                 <br/>
                 <h4>¿Te gustó el formulario? </h4> <br/>
                     <textarea name="comentario" rows="5" cols="50" placeholder="Deja tu comentario"></textarea>
-                    <input type="submit" name="submit" value="Ingresar el formulario">
+                    <input type="submit" name="ingresar" value="Ingresar el formulario">
             </form>
             <script src="../p/Scripts/poke.js"></script>
         </div>
 
-        <div class="formulario">
-            <h2> Busque el dato que necesite </h2> <br/>
-            <form method="post">
-                <input type="text" name="username" placeholder="Nickname" required>
-                <input type="submit" value="Buscar Username">
-            </form>
-        </div>
     </div>
     <?php
-    include("../p/php/client.php");
+    include("../p/php/save.php");
     ?>
     </body>
 
