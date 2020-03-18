@@ -1,6 +1,10 @@
 <?php include("../includes/header.php") ?>
 <?php include("../includes/connect.php") ?>
-
+    <nav class="navbar navbar-dark" style="background-color: #ff851b;">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">Bienvenidos a Pokemon GO</a>
+        </div>
+    </nav>
 
     <div class="contenedor-form">
         <div class="toggle">
@@ -8,24 +12,24 @@
         </div>
 
         <div class="formulario">
-            <h3> Buscar </h3> <br/>
-            <form action="../includes/search.php" method="get">
+            <h3> Actualizar </h3> <br/>
+            <form action="../includes/edit.php" method="get">
                 <input type="text" name="username" placeholder="Nickname" required>
-                <input type="submit" name="buscar" value="Editar Username">
+                <input type="submit" name="edit" value="Editar datos">
 
             </form>
-            <br/>
+            <br/> <h3> Eliminar </h3><br/>
             <form action="../includes/delete.php" method="get">
                 <input type="text" name="username" placeholder="Nickname" required> 
-                <input type="submit" name="delete" value="Eliminar Username">
+                <input type="submit" name="delete" value="Eliminar datos">
             </form>
         </div>
 
         <div class="formulario">
             <h3>Crea tu cuenta</h3><br/>
-            <form action="../includes/save.php"method="post">
+            <form action="../includes/save.php" method="post">
                  <p> <input type="text" placeholder="Nickname" name="username" required>
-                   <input type="password" placeholder="Contraseña" name="contraseña">
+                   <input type="password" placeholder="Contraseña" name="contraseña" required>
                   <input type="email" placeholder="Correo electronico" name="correo" required></p>
                 <div class="radio-group">
                   <h5>Genero</h5>
